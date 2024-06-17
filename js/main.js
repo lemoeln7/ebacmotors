@@ -18,12 +18,18 @@ $(document).ready(function(){
             telefone: {
                 required: true
             },
+            cpf: {
+                required: true
+            },
+            endereco: {
+                required: true
+            },
             mensagem: {
                 required: true,
             },
-            veiculoDeIntresse: {
-                required: false,
-            }
+            cep: {
+                required: true
+            },
         },
         messages: {
             nome: 'Por favor, insira o seu nome'
@@ -37,15 +43,5 @@ $(document).ready(function(){
                 alert(`Existem ${camposIncorretos} campos incorretos`)
             }
         }
-    })
-    $('.lista-veiculos button').click(function(){
-        const destino = $('#contato');
-        const nomeVeiculo = $(this).parent().find('h3').text();
-
-        $('#veiculo-interesse').val(nomeVeiculo)
-        $('html').animate({
-            scrollTop: destino.offset().top
-        },1000)
-        
     })
 })
